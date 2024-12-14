@@ -6,6 +6,7 @@ import Movies from './pages/Movies';
 import MovieDetail from './pages/MovieDetail';
 import Characters from './pages/Characters';
 import DeathlyHallows from './pages/DeathlyHallows';
+import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/characters" element={<Characters />} />
           <Route path="/deathly-hallows" element={<DeathlyHallows />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
