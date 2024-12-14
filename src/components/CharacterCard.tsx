@@ -5,9 +5,11 @@ interface CharacterCardProps {
   image: string;
   house: string;
   description: string;
+  wand?: string;
+  patronus?: string;
 }
 
-export default function CharacterCard({ name, image, house, description }: CharacterCardProps) {
+export default function CharacterCard({ name, image, house, description, wand, patronus }: CharacterCardProps) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
@@ -16,7 +18,7 @@ export default function CharacterCard({ name, image, house, description }: Chara
         onClick={() => setShowDetails(true)}
         className="card-hover cursor-pointer rounded-lg overflow-hidden bg-[#00001b] text-white"
       >
-        <img src={image} alt={name} className="w-full h-72 object-cover" />
+        <img src={image} alt={name} className="w-full h-80 object-fill" />
         <div className="p-4">
           <h3 className="harry-potter-font text-xl mb-2">{name}</h3>
           <p className="text-gold">{house}</p>
@@ -36,8 +38,10 @@ export default function CharacterCard({ name, image, house, description }: Chara
               <img src={image} alt={name} className="w-64 h-64 object-cover rounded-lg" />
               <div>
                 <h2 className="harry-potter-font text-3xl text-gold mb-4">{name}</h2>
-                <p className="text-white mb-2">House: {house}</p>
-                <p className="text-white">{description}</p>
+                <p className="text-white mb-2">House: <span className="text-gold">{house}</span></p>
+                <p className="text-white mb-2">{description}</p>
+                <p className="text-white mb-2">Wand: <span className="text-gold">{wand}</span></p>
+                <p className="text-white mb-2">patronus: <span className="text-gold">{patronus}</span></p>
               </div>
             </div>
           </div>
