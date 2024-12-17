@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-      <nav className="bg-black/90 sticky top-0 z-50 px-4 py-4">
+      <nav className="bg-[#00011B] sticky top-0 z-50 px-4 py-4">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
