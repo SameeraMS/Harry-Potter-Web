@@ -1,16 +1,16 @@
 {
-    "homepage": "https://sameerams.github.io/Harry-Potter-Web",
   "name": "harry-potter-website",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://sameerams.github.io/Harry-Potter-Web",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
